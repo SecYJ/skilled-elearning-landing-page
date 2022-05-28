@@ -1,0 +1,50 @@
+.btn {
+	cursor: pointer;
+	border-radius: 1.75rem;
+	border: none;
+	outline: none;
+	text-transform: capitalize;
+	padding: 0.75rem 1.25rem;
+	background-color: transparent;
+	font-family: inherit;
+	font-weight: 700;
+	line-height: 1.75;
+	font-size: 1rem;
+
+	&-accent {
+		background-color: var(--dark-blue);
+		color: var(--white);
+
+		&:hover {
+			background-color: var(--purple);
+		}
+	}
+
+	&-text {
+		color: var(--pink-dark);
+		// background-color: white;
+		padding: 0;
+
+		&:hover {
+			color: var(--pink-light);
+		}
+	}
+
+	&-gradient-primary {
+		background-image: var(--gradient-primary);
+		color: var(--white);
+
+		&:hover {
+			background-image: var(--gradient-primary-hover);
+		}
+	}
+
+	&-gradient-accent {
+		background-image: var(--gradient-accent);
+		color: var(--white);
+
+		&:hover {
+			background-image: var(--gradient-accent-hover);
+		}
+	}
+}

@@ -1,0 +1,13 @@
+@mixin breakpoints($device) {
+	@if $device == tablet {
+		@media (min-width: 768px) {
+			@content;
+		}
+	}
+
+	@if $device == desktop {
+		@media (min-width: 1440px) {
+			@content;
+		}
+	}
+}

@@ -1,0 +1,47 @@
+@use "breakpoints" as b;
+
+.courses {
+	background-image: var(--gradient-popular);
+	padding-bottom: 5rem;
+
+	@include b.breakpoints(tablet) {
+		padding-bottom: 5.375;
+	}
+
+	@include b.breakpoints(desktop) {
+		padding-bottom: 8.75rem;
+	}
+
+	&-grid {
+		display: grid;
+		gap: 2.5rem;
+		list-style: none;
+
+		@include b.breakpoints(tablet) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include b.breakpoints(desktop) {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 5rem 2rem;
+		}
+	}
+
+	& .card:first-child {
+		background-image: var(--gradient-primary);
+		color: var(--white);
+		font-size: 1.5rem;
+		line-height: 1.33;
+		font-weight: 800;
+		padding: 1.75rem {
+			top: 1.5rem;
+			bottom: 2rem;
+		}
+
+		@include b.breakpoints(tablet) {
+			padding: 2rem {
+				top: 3.5rem;
+			}
+		}
+	}
+}

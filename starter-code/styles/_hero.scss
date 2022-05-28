@@ -1,0 +1,30 @@
+@use "breakpoints" as b;
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	padding-top: 2.5rem;
+
+	@include b.breakpoints(tablet) {
+		flex-direction: row;
+	}
+
+	&-title {
+		font-weight: 800;
+		color: var(--dark-blue);
+		font-size: 2.5rem;
+		line-height: 1.25;
+		margin-bottom: 1.25rem;
+	}
+
+	&-paragraph {
+		line-height: 1.625;
+		margin: 1.25rem 0;
+	}
+}
+
+.main {
+	padding-top: 4rem;
+}

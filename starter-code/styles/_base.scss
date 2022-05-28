@@ -1,0 +1,66 @@
+@use "breakpoints" as b;
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap");
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+:root {
+	--dark-blue: #13183f;
+	--grey: #83869a;
+	--purple: #666ca3;
+	--pink-dark: #f74f80;
+	--pink-light: #ffa7c3;
+	--white: #fff;
+	--gradient-primary: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+	--gradient-primary-hover: linear-gradient(
+			0deg,
+			rgba(255, 255, 255, 0.5),
+			rgba(255, 255, 255, 0.5)
+		),
+		linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+	--gradient-accent: linear-gradient(180deg, #4851ff -54.32%, #f02aa6 100%);
+	--gradient-accent-hover: linear-gradient(
+			0deg,
+			rgba(255, 255, 255, 0.5),
+			rgba(255, 255, 255, 0.5)
+		),
+		linear-gradient(180deg, #4851ff -54.32%, #f02aa6 100%);
+	--gradient-popular: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%);
+}
+
+body {
+	font-family: "Plus Jakarta Sans", sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 28px;
+	color: var(--grey);
+}
+
+.container {
+	// width: min(375px, 100%);
+	max-width: 375px;
+	width: 100%;
+	margin-inline: auto;
+	padding: 0 1rem;
+
+	@include b.breakpoints(tablet) {
+		// width: min(768px, 1439px);
+		max-width: 768px;
+	}
+
+	@include b.breakpoints(desktop) {
+		// width: min(1440px, auto);
+		max-width: 1440px;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
