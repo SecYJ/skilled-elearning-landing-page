@@ -6,9 +6,21 @@
 	align-items: center;
 	gap: 2rem;
 	padding-top: 2.5rem;
+	position: relative;
 
 	@include b.breakpoints(tablet) {
 		flex-direction: row;
+		margin-bottom: 250px;
+	}
+
+	&-column {
+		@include b.breakpoints(tablet) {
+			max-width: 400px;
+		}
+
+		@include b.breakpoints(desktop) {
+			max-width: 457px;
+		}
 	}
 
 	&-title {
@@ -17,11 +29,28 @@
 		font-size: 2.5rem;
 		line-height: 1.25;
 		margin-bottom: 1.25rem;
+
+		@include b.breakpoints(desktop) {
+			font-size: 3.5rem;
+		}
 	}
 
 	&-paragraph {
 		line-height: 1.625;
 		margin: 1.25rem 0;
+	}
+
+	&-image {
+		@include b.breakpoints(tablet) {
+			position: absolute;
+			top: -65%;
+			right: -55%;
+		}
+
+		@include b.breakpoints(desktop) {
+			top: -100%;
+			right: -50%;
+		}
 	}
 }
 

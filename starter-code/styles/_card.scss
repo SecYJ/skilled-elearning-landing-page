@@ -1,11 +1,32 @@
+@use "breakpoints" as b;
+
 .card {
 	background-color: var(--white);
-	padding: 3.5rem 1.75rem 2rem;
+	padding: 1.75rem {
+		top: 3.5rem;
+		bottom: 2rem;
+	}
 	position: relative;
 	border-radius: 0.75rem;
 	box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
 	display: grid;
 	grid-template-rows: auto 1fr;
+	gap: 1rem;
+
+	@include b.breakpoints(tablet) {
+		padding: {
+			left: 2rem;
+			right: 2rem;
+		}
+	}
+
+	@include b.breakpoints(desktop) {
+		gap: 1.5rem;
+		padding: 2rem {
+			top: 4rem;
+			bottom: 2.5rem;
+		}
+	}
 
 	&-label {
 		position: absolute;
@@ -19,7 +40,10 @@
 		font-size: 1.25rem;
 		color: var(--dark-blue);
 		line-height: 1.25;
-		margin-bottom: 1rem;
+
+		@include b.breakpoints(desktop) {
+			font-size: 1.5rem;
+		}
 	}
 
 	&-body {
@@ -32,5 +56,9 @@
 		margin-bottom: 1.25rem;
 		font-size: 1rem;
 		line-height: 1.625;
+
+		@include b.breakpoints(desktop) {
+			font-size: 18px;
+		}
 	}
 }

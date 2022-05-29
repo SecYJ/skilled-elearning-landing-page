@@ -31,7 +31,7 @@
 			<!-- section hero -->
 			<section class="container">
 				<div class="hero">
-					<div>
+					<div class="hero-column">
 						<h1 class="hero-title">
 							Maximize skill, minimize budget
 						</h1>
@@ -44,11 +44,23 @@
 							get started
 						</button>
 					</div>
-					<div>
-						<img
-							src="./assets/image-hero-mobile.png"
-							alt="hero image"
-						/>
+					<div class="hero-column"></div>
+					<div class="hero-image">
+						<picture>
+							<source
+								media="(min-width: 1440px)"
+								srcset="./assets/image-hero-desktop.webp"
+							/>
+							<source
+								media="(min-width: 768px)"
+								srcset="./assets/image-hero-tablet.webp"
+							/>
+							<source
+								media="(min-width: 375px)"
+								srcset="./assets/image-hero-mobile.webp"
+							/>
+							<img src="./assets/image-hero-desktop.png" alt="" />
+						</picture>
 					</div>
 				</div>
 			</section>
@@ -68,11 +80,11 @@
 							/>
 							<h3 class="card-heading">Animation</h3>
 							<div class="card-body">
-								<div class="card-description">
+								<p class="card-description">
 									Learn the latest animation techniques to
 									create stunning motion design and captivate
 									your audience.
-								</div>
+								</p>
 								<button type="button" class="btn btn-text">
 									get started
 								</button>
@@ -86,10 +98,10 @@
 							/>
 							<h3 class="card-heading">Design</h3>
 							<div class="card-body">
-								<div class="card-description">
+								<p class="card-description">
 									Create beautiful, usable interfaces to help
 									shape the future of how the web looks.
-								</div>
+								</p>
 								<button type="button" class="btn btn-text">
 									get started
 								</button>
@@ -103,11 +115,11 @@
 							/>
 							<h3 class="card-heading">Photography</h3>
 							<div class="card-body">
-								<div class="card-description">
+								<p class="card-description">
 									Explore critical fundamentals like lighting,
 									composition, and focus to capture
 									exceptional photos.
-								</div>
+								</p>
 								<button type="button" class="btn btn-text">
 									get started
 								</button>
@@ -121,11 +133,11 @@
 							/>
 							<h3 class="card-heading">Crypto</h3>
 							<div class="card-body">
-								<div class="card-description">
+								<p class="card-description">
 									Learn the latest animation techniques to
 									create stunning motion design and captivate
 									your audience.
-								</div>
+								</p>
 								<button type="button" class="btn btn-text">
 									get started
 								</button>
@@ -139,11 +151,11 @@
 							/>
 							<h3 class="card-heading">Business</h3>
 							<div class="card-body">
-								<div class="card-description">
+								<p class="card-description">
 									A step-by-step playbook to help you start,
 									scale, and sustain your business without
 									outside investment.
-								</div>
+								</p>
 								<button type="button" class="btn btn-text">
 									get started
 								</button>
@@ -168,43 +180,5 @@
 				</div>
 			</div>
 		</footer>
-
-		<!-- Get Started
-
-  Maximize skill, minimize budget
-
-  Our modern courses across a range of in-demand skills will give you the 
-  knowledge you need to live the life you want.
-
-  Get Started
-
-  Check out our most popular courses!
-
-  Animation
-  Learn the latest animation techniques to create stunning motion 
-  design and captivate your audience.
-  Get Started
-
-  Design
-  Create beautiful, usable interfaces to help shape the future of 
-  how the web looks.
-  Get Started
-
-  Photography
-  Explore critical fundamentals like lighting, composition, and focus 
-  to capture exceptional photos.
-  Get Started
-
-  Crypto
-  All you need to know to get started investing in crypto. Go from beginner 
-  to advanced with this 54 hour course.
-  Get Started
-
-  Business
-  A step-by-step playbook to help you start, scale, and sustain your business 
-  without outside investment.
-  Get Started
-
-  Get Started -->
 	</body>
 </html>

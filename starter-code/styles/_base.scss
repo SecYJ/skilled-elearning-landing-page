@@ -39,23 +39,24 @@ body {
 	font-size: 18px;
 	line-height: 28px;
 	color: var(--grey);
+	overflow-x: hidden;
 }
 
 .container {
-	// width: min(375px, 100%);
 	max-width: 375px;
 	width: 100%;
 	margin-inline: auto;
-	padding: 0 1rem;
+	padding: {
+		left: 1rem;
+		right: 1rem;
+	}
 
 	@include b.breakpoints(tablet) {
-		// width: min(768px, 1439px);
-		max-width: 768px;
+		max-width: 689px;
 	}
 
 	@include b.breakpoints(desktop) {
-		// width: min(1440px, auto);
-		max-width: 1440px;
+		max-width: 1110px;
 	}
 }
 

@@ -19,6 +19,7 @@
 
 		@include b.breakpoints(tablet) {
 			grid-template-columns: repeat(2, 1fr);
+			gap: 3.5rem 0.75rem;
 		}
 
 		@include b.breakpoints(desktop) {
@@ -42,6 +43,10 @@
 			padding: 2rem {
 				top: 3.5rem;
 			}
+		}
+
+		@include b.breakpoints(desktop) {
+			font-size: 2rem;
 		}
 	}
 }
